@@ -32,6 +32,15 @@ def print(students)
     end
 end
 
+def printonlyD(students)
+    puts "The students whose name begins with D are:"
+    students.each do |student|
+        if student[:name][0] == "D"
+            puts "#{student[:name]} (#{student[:cohort]} cohort)"
+        end
+    end
+end
+
 def print_footer(names)
     puts "Overall, we have #{names.count} great students"
 end
@@ -42,3 +51,4 @@ students = input_students
 print_header
 print(students)
 print_footer(students)
+printonlyD(students)
