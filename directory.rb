@@ -27,6 +27,30 @@ def print_footer(names)
     puts "Overall, we have #{names.count} great students"
 end
 
+def input_students
+    puts "Please enter the names of the students"
+    puts "To finish, just hit return twice"
+    #create an empty array
+    students = []
+    #get first name
+    name = gets.chomp
+    #while the name is not empty, repeat code
+    while !name.empty? do
+        #add student hash to the array
+        students << {name: name, cohort: :november}
+        puts "Now we have #{students.count} students"
+        #get another name from user
+        name = gets. chomp
+    end
+    #return array of students
+    students
+end
+
+students = input_students
 print_header
-puts (students)
+print(students)
 print_footer(students)
+
+# print_header
+# puts (students)
+# print_footer(students)
