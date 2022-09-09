@@ -1,3 +1,5 @@
+# @students = []
+
 def input_students
     puts "Please enter the names of the students"
     puts "To finish, just hit return twice"
@@ -17,14 +19,16 @@ def input_students
     students
 end
 
+
 def print_header
     puts "The students of Villians Academy"
     puts "--------------"
 end
 
 def print(students)
-    students.each do |student|
-        puts "#{student[:name]} (#{student[:cohort]} cohort)"
+    # students.each do |students|
+    students.each_with_index do|students, index|
+        puts "#{index + 1}. #{students[:name]} (#{students[:cohort]} cohort)"
     end
 end
 
