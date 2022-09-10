@@ -41,6 +41,16 @@ def printonlyD(students)
     end
 end
 
+def long_name(students)
+    puts "The students whose name are longer than 12 characters are:"
+    students.each do |student|
+        if student[:name].length > 12
+            puts "#{student[:name]} (#{student[:cohort]} cohort)"
+        end
+    end
+end
+
+
 def print_footer(names)
     puts "Overall, we have #{names.count} great students"
 end
@@ -52,3 +62,4 @@ print_header
 print(students)
 print_footer(students)
 printonlyD(students)
+long_name(students)
