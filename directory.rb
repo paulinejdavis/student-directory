@@ -1,19 +1,47 @@
-# @students = []
+@students = []
 
 def input_students
     puts "Please enter the names of the students"
     puts "To finish, just hit return twice"
-    #create an empty array
-    students = []
-    #get first name
-    name = gets.chomp
-    #while the name is not empty, repeat code
+    
+    name = STDIN.gets.chomp
     while !name.empty? do
-        #add student hash to the array
-        students << {name: name, cohort: :november}
-        puts "Now we have #{students.count} students"
+        puts "Please enter the cohort"
+        cohort = STDIN.gets.chomp
+        if cohort == ""
+            cohort = "Unassigned"
+        else
+            cohort = cohort.to_sym
+        end
+        puts "Enter country"
+        country = STDIN.gets.chomp
+        puts "Enter age"
+        age = STDIN.gets.chomp
+        puts "Enter height"
+        height = STDIN.gets.chomp
+        puts "Enter hobbies"
+        hobbies = STDIN.gets.chomp
+        @students << {name: name, cohort: cohort, country: country, age: age, height: height, hobbies: hobbies}
+        puts "Now we have #{@students.count} students"   
+        puts "\n Enter a new name. "
+        puts"(To finish, just hit return)"
+        name = STDIN.gets.chomp
+        
+        
+        
+        
+        
+        # if cohort.empty? then cohort = "december" end
+        # Date: : ABBR_MONTHNAMES.include? cohort ? cohort.to_sym : cohort = :default_cohort
+        #   puts "Now we have #{students.count} students#{@students.count > 1 ? 's' : ''}."   
+        # #add student hash to the array
+        # students << {name: name, cohort: cohort, country: country, height: height, hobbies: hobbies}
+        # puts "\n Enter a new name. "
+        # puts"(To finish, just hit return)"
+        # # name = STDIN.gets.strip
+      
         #get another name from user
-        name = gets. chomp
+        # name = gets. chomp
     end
     #return array of students
     students
