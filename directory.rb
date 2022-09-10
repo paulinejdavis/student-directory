@@ -22,7 +22,7 @@ end
 
 def print_header
     puts "The students of Villians Academy"
-    puts "--------------"
+    puts "--------------".center(25)
 end
 
 def print(students)
@@ -32,6 +32,18 @@ def print(students)
     end
 end
 
+# def student_questions(student)
+#          puts "Enter country of".center(@width)
+#         country = STDIN.gets.chomp
+#         student[:country] = country
+#         puts "Enter hobbies of".center(@width)
+#         hobbies = STDIN.gets.chomp
+#         student[:hobbies] = hobbies
+#         puts "Enter height of".center(@width)
+#         height = STDIN.gets.chomp
+#         student[:height] = height
+# end
+    
 def printonlyD(students)
     puts "The students whose name begins with D are:"
     students.each do |student|
@@ -63,3 +75,4 @@ print(students)
 print_footer(students)
 printonlyD(students)
 long_name(students)
+# student_questions(students)
